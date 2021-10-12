@@ -1,12 +1,11 @@
 <?php
     require ('steamauth/steamauth.php');
-	# You would uncomment the line beneath to make it refresh the data every time the page is loaded
-	// unset($_SESSION['steam_uptodate']);
+    unset($_SESSION['steam_uptodate']);
 ?>
 <!DOCTYPE html>
 <html>
 <head>
-    <title>page</title>
+    <title>Sign-In-Page</title>
 </head>
 <body>
 <?php
@@ -17,10 +16,6 @@ if(!isset($_SESSION['steamid'])) {
     
 }  else {
     include ('steamauth/userInfo.php');
-
-    //Protected content
-    echo "Welcome back " . $steamprofile['personaname'] . "</br>";
-    echo "here is your avatar: </br>" . '<img src="'.$steamprofile['avatarfull'].'" title="" alt="" /><br>'; // Display their avatar!
     
     logoutbutton();
 }    
