@@ -15,8 +15,6 @@ if(!isset($_SESSION['steamid'])) {
     loginbutton(); //login buttonhttps://github.com/YEET200/Login-Form-with-steam-google-and-Facebook/security
     
 }  else {
-    include ('steamauth/userInfo.php');
-    
-    logoutbutton();
+    //working on redirect
 }    
 ?>
